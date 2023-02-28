@@ -2,8 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: "Graphik", sans-serif;
+@layer base {
+  html {
+    font-family: "Helvetica", "Arial", "sans-serif";
+  }
 }
 
 .navbar-fixed {
