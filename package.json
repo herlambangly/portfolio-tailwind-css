@@ -6,5 +6,8 @@
   },
   "scripts": {
     "dev": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch"
+  },
+  "dependencies": {
+    "taos": "^1.0.2"
   }
 }

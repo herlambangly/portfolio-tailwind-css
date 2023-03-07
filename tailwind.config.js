@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: { relative: true, files: ["./public/**/*.{html,js}", "./index.html"] },
+  content: {
+    relative: true,
+    files: ["./public/**/*.{html,js}", "./index.html"],
+    transform: (content) => content.replace(/taos:/g, ""),
+  },
   theme: {
     container: {
       center: true,
@@ -17,5 +21,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("./node_modules/taos/plugin")],
+  safelist: ["!duration-0", "!delay-0", 'html.js :where([class*="taos:"]:not(.taos-init))'],
 };
