@@ -5,6 +5,7 @@ module.exports = {
     files: ["./public/**/*.{html,js}", "./index.html"],
     transform: (content) => content.replace(/taos:/g, ""),
   },
+  darkMode: "class",
   theme: {
     container: {
       center: true,
